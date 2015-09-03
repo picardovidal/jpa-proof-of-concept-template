@@ -1,10 +1,7 @@
 package canchas;
 
-import java.util.Collection;
+import org.uqbarproject.jpa.java8.extras.WithGlobalEntityManager;
 
-
-public class Club {
-  
-  private Collection<Cancha> canchas;
+public class Club implements WithGlobalEntityManager{
 
 }
