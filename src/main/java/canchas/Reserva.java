@@ -1,21 +1,27 @@
 package canchas;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
 public class Reserva {
+	
+  @Id
+  @GeneratedValue
+  private Long reservaId;
 
   @OneToMany
   private Collection<Inscripcion> inscripciones;
   
-  private LocalDateTime fechaHoraInicio;
+  private Date fechaHoraInicio;
   
-  private LocalDateTime fechaHoraFin;
+  private Date fechaHoraFin;
     
   @ManyToOne
   private Color color;

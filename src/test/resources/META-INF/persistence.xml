@@ -7,6 +7,14 @@
   
     <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
     	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+    	<class>canchas.Cancha</class>
+    	<class>canchas.Club</class>
+    	<class>canchas.Color</class>
+    	<class>canchas.Fabricante</class>
+    	<class>canchas.Inscripcion</class>
+    	<class>canchas.Jugador</class>
+    	<class>canchas.Paleta</class>
+    	<class>canchas.Reserva</class>
     	
     	
     	 
