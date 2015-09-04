@@ -1,7 +1,11 @@
 package canchas;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -56,4 +60,11 @@ public class Cancha {
 		this.color = color;
 	}
 
+  public void reservar(LocalDateTime inicioReserva, Collection<Jugador> jugadores) {
+    reservas.add(new ReservaBuilder()
+      .inicioReserva(inicioReserva)
+      .jugadores(jugadores)
+      .cancha(this)
+      .build());
+  }
 }

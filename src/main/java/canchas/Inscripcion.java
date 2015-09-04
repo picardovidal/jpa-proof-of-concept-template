@@ -7,15 +7,19 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Inscripcion {
-	
+
   @Id
   @GeneratedValue
   private Long inscripcionId;
-  
+
   @ManyToOne
   private Paleta paleta;
-  
+
   @ManyToOne
   private Jugador jugador;
 
+  public Inscripcion(Jugador jugador, Paleta paleta) {
+    this.jugador = jugador;
+    this.paleta = paleta;
+  }
 }

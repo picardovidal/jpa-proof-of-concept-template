@@ -26,5 +26,9 @@ public class Jugador {
 
   @OneToOne
   private Paleta paleta;
+
+  public Inscripcion crearInscripcion() {
+    return new Inscripcion(this, this.paleta);
+  }
   
 }
