@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +21,7 @@ public class Reserva {
   @GeneratedValue
   private Long reservaId;
 
-  @OneToMany
+  @OneToMany(cascade={CascadeType.PERSIST})
   private Collection<Inscripcion> inscripciones;
 
   @Convert(converter=LocalDateTimeConverter.class)

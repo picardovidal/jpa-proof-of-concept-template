@@ -5,18 +5,18 @@ import static java.util.stream.Collectors.toList;
 import java.time.LocalDateTime;
 import java.util.Collection;
 
-public class ReservaBuilder {
+public class GeneradorReserva {
 
   private LocalDateTime inicioReserva;
   private Collection<Jugador> jugadores;
   private Cancha cancha;
 
-  public ReservaBuilder inicioReserva(LocalDateTime inicioReserva) {
+  public GeneradorReserva inicioReserva(LocalDateTime inicioReserva) {
     this.inicioReserva = inicioReserva;
     return this;
   }
 
-  public ReservaBuilder jugadores(Collection<Jugador> jugadores) {
+  public GeneradorReserva jugadores(Collection<Jugador> jugadores) {
     this.jugadores = jugadores;
     return this;
   }
@@ -25,7 +25,7 @@ public class ReservaBuilder {
     return inicioReserva.plusHours(1);
   }
 
-  public ReservaBuilder cancha(Cancha cancha) {
+  public GeneradorReserva cancha(Cancha cancha) {
     this.cancha = cancha;
     return this;
   }

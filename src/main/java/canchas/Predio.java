@@ -2,7 +2,7 @@ package canchas;
 
 import org.uqbarproject.jpa.java8.extras.WithGlobalEntityManager;
 
-public class Club implements WithGlobalEntityManager{
+public class Predio implements WithGlobalEntityManager {
 
 	public void registrar(Cancha unaCancha){
 		entityManager().persist(unaCancha);
